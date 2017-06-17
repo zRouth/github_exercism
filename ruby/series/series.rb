@@ -7,7 +7,6 @@ class Series
   def slices(length)
     raise ArgumentError, 'hold on to your butts!' if length > @input.length
 
-    array = @input.split('').map(&:to_i)
-    array.each_cons(length).to_a
+    @input.split('').map(&:to_i).each_cons(length).to_a
   end
 end
