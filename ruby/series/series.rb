@@ -1,5 +1,4 @@
 class Series
-
   def initialize(input)
     @input = input
   end
