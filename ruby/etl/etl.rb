@@ -1,11 +1,9 @@
 class ETL
   def self.transform(old_key)
-    old_key.each_with_object({}) do |(key, value), new_key|
-      reverse_order(new_key, value, key)
-    end
-  end
-
-  def self.reverse_order(store, new_keys, value)
-    new_keys.each { |key| store[key.downcase] = value }
-  end
+    Hash[
+       input.flat_map do |score, letters|
+         letters.map(&:downcase).product([score])
+       end
+     ]
+   end
 end
