@@ -9,11 +9,3 @@ class Grains
   end
 
 end
-
-
-
-
-
-
-
- # (1..64).reduce { |sum, num| sum + square(num) }
